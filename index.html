@@ -7,25 +7,125 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f5f5f5;
         }
-        h1 {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        h1, h2 {
             color: #333;
             text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
         }
-        p {
-            line-height: 1.6;
-            color: #666;
+        .section {
+            background: white;
+            padding: 2em;
+            margin: 1em 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+        }
+        .project-card {
+            background: #f9f9f9;
+            padding: 1em;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <p>This is a simple test page for our repository.</p>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h1>Welcome to Dera Agent Test!</h1>
+            <p>This is an enhanced version of our test page with additional features and content.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>We are a team dedicated to creating amazing web experiences. Our goal is to demonstrate various features and capabilities through this test page.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Our Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>A sample project showcasing our capabilities.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Another exciting project in our portfolio.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Yet another amazing project we've worked on.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
 </body>
 </html>
